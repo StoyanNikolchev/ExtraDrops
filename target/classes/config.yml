@@ -3,7 +3,7 @@
 #
 #---EXAMPLE FORMATTING---
 #
-ELDER_GUARDIAN:
-  Added_Drops:
-    DIAMOND: 50
-    EMERALD_BLOCK: 30
+#ELDER_GUARDIAN:
+#  Added_Drops:
+#    DIAMOND: 50
+#    EMERALD_BLOCK: 30
