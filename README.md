@@ -6,13 +6,13 @@ ExtraDrops is a Minecraft (1.20) Spigot plugin that allows server administrators
 
 - **Customizable Drops**: Define additional drops for specific Minecraft entities.
 - **Percentage-Based Drops**: Specify the chance (percentage) for each drop to occur.
+- **Customizable Amount**: Set a minimum and maximum amount for each drop.
 
 # Example Configuration for ExtraDrops
 ```yaml
-ELDER_GUARDIAN:
-  Added_Drops:
-    - DIAMOND: 50
-    - EMERALD_BLOCK: 30
 ENDER_DRAGON:
   Added_Drops:
-    - NETHER_STAR: 10
+    NETHER_STAR:
+      Chance: 100
+      Min_Amount: 1
+      Max_Amount: 300
