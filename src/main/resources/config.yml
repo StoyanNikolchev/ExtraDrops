@@ -1,9 +1,22 @@
 #
-#The number indicates the chance (percentage) of the item being dropped
+#The chance indicates the chance (percentage) of the item being dropped
 #
 #---EXAMPLE FORMATTING---
 #
 #ELDER_GUARDIAN:
 #  Added_Drops:
-#    DIAMOND: 50
-#    EMERALD_BLOCK: 30
+#    DIAMOND:
+#      Chance: 50
+#      Min_Amount: 1
+#      Max_Amount: 3
+#    EMERALD_BLOCK:
+#      Chance: 30
+#      Min_Amount: 2
+#      Max_Amount: 5
+
+#COW:
+#  Added_Drops:
+#    EMERALD:
+#      Chance: 100
+#      Min_Amount: 1
+#      Max_Amount: 1

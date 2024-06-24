@@ -5,9 +5,9 @@ import org.bukkit.Material;
 import java.util.Random;
 
 public class Utils {
+    private static final Random random = new Random();
 
     public static boolean chanceFails(int chance) {
-        Random random = new Random();
         int randomNumber = random.nextInt(101);
 
         return randomNumber >= chance;
@@ -19,5 +19,9 @@ public class Utils {
         } catch (IllegalArgumentException e) {
             return null;
         }
+    }
+
+    public static int generateRandomAmount(int min, int max) {
+        return min + random.nextInt(max - min + 1);
     }
 }
