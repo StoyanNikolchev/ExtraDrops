@@ -1,0 +1,9 @@
+#
+#The number indicates the chance (percentage) of the item being dropped
+#
+#---EXAMPLE FORMATTING---
+#
+#ELDER_GUARDIAN:
+#  Added_Drops:
+#    DIAMOND: 50
+#    EMERALD_BLOCK: 30

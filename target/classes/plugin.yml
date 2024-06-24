@@ -1,0 +1,4 @@
+name: ExtraDrops
+version: 1.0
+main: org.nikolchev98.extradrops.ExtraDrops
+api-version: '1.20.4'

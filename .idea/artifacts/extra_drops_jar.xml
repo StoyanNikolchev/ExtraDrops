@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="extra-drops:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/extra_drops_jar</output-path>
+    <root id="archive" name="extra-drops.jar">
+      <element id="module-output" name="extra-drops" />
+    </root>
+  </artifact>
+</component>
