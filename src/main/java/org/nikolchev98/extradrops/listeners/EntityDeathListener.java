@@ -1,5 +1,6 @@
 package org.nikolchev98.extradrops.listeners;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -48,6 +49,7 @@ public class EntityDeathListener implements Listener {
                 ItemStack itemStack = new ItemStack(itemMaterial);
 
                 deathEvent.getDrops().add(itemStack);
+                System.out.printf("%s dropped an additional %s%n", entityName, itemMaterial.name());
             }
         }
     }

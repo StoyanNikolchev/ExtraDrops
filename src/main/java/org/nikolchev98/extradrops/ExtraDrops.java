@@ -13,10 +13,11 @@ public final class ExtraDrops extends JavaPlugin {
         saveDefaultConfig();
         config = getConfig();
         Bukkit.getPluginManager().registerEvents(new EntityDeathListener(config), this);
+        System.out.println("ExtraDrops is enabled.");
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        System.out.println("ExtraDrops is disabled.");
     }
 }
