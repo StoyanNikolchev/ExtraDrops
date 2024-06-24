@@ -1,5 +1,5 @@
 #
-#The chance indicates the chance (percentage) of the item being dropped
+#The drop chance must be between 0 and 100. Negative values act like 0 and values above 100 act like 100.
 #
 #---EXAMPLE FORMATTING---
 #
