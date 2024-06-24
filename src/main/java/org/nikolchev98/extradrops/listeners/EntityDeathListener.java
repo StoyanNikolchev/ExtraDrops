@@ -11,9 +11,9 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 import java.util.logging.Logger;
 
+import static org.nikolchev98.extradrops.enums.LoggerMessages.*;
 import static org.nikolchev98.extradrops.utils.Utils.*;
 
 public class EntityDeathListener implements Listener {
@@ -39,7 +39,7 @@ public class EntityDeathListener implements Listener {
 
         // Checks if "Added_Drops" for this mob exists in the yml
         if (dropsSection == null) {
-            logger.warning(String.format("Extra drops for %s configured incorrectly. Please check config.yml%n", entityName));
+            logger.warning(String.format(ADDED_DROPS_DO_NOT_EXIST, entityName));
             return;
         }
 
@@ -50,7 +50,7 @@ public class EntityDeathListener implements Listener {
             ConfigurationSection itemConfig = dropsSection.getConfigurationSection(itemName);
 
             if (itemConfig == null) {
-                logger.warning(String.format("Invalid configuration for item %s for entity %s. Skipping.", itemName, entityName));
+                logger.warning(String.format(SKIPPING_INVALID_ITEM_CONFIGURATION, itemName, entityName));
                 continue;
             }
 
@@ -82,7 +82,7 @@ public class EntityDeathListener implements Listener {
             Material itemMaterial = getMaterial(itemName);
 
             if (itemMaterial == null) {
-                logger.warning(String.format("Invalid item name: '%s' for entity %s. Please check config.yml", itemName, entityName));
+                logger.warning(String.format(INVALID_ITEM_NAME, itemName, entityName));
                 continue;
             }
 
@@ -90,7 +90,7 @@ public class EntityDeathListener implements Listener {
             ItemStack itemStack = new ItemStack(itemMaterial, amount);
 
             deathEvent.getDrops().add(itemStack);
-            logger.info(String.format("%s dropped an extra item: %s x %d", entityName, itemMaterial.name(), amount));
+            logger.info(String.format(EXTRA_ITEM_DROPPED, entityName, itemMaterial.name(), amount));
         }
     }
 }
