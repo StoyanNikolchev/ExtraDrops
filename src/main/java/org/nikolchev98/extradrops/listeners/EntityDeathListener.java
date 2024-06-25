@@ -56,8 +56,8 @@ public class EntityDeathListener implements Listener {
 
             // Retrieves percentage, min_amount, and max_amount from config
             int percentage = itemConfig.getInt("Chance", 0);
-            int minAmount = itemConfig.getInt("Min_Amount", 0);
-            int maxAmount = itemConfig.getInt("Max_Amount", 0);
+            int minAmount = itemConfig.getInt("Min_Amount", 1);
+            int maxAmount = itemConfig.getInt("Max_Amount", 1);
 
             Map<String, Integer> itemData = new HashMap<>();
             itemData.put("Chance", percentage);
