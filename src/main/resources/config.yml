@@ -4,19 +4,17 @@
 #---EXAMPLE FORMATTING---
 #
 #ELDER_GUARDIAN:
-#  Added_Drops:
-#    DIAMOND:
-#      Chance: 50
-#      Min_Amount: 1
-#      Max_Amount: 3
-#    EMERALD_BLOCK:
-#      Chance: 30
-#      Min_Amount: 2
-#      Max_Amount: 5
+#  DIAMOND:
+#    Chance: 50
+#    Min_Amount: 1
+#    Max_Amount: 3
+#  EMERALD_BLOCK:
+#    Chance: 30
+#    Min_Amount: 2
+#    Max_Amount: 5
 
 #COW:
-#  Added_Drops:
-#    EMERALD:
-#      Chance: 100
-#      Min_Amount: 1
-#      Max_Amount: 1
+#  EMERALD:
+#    Chance: 100
+#    Min_Amount: 1
+#    Max_Amount: 1

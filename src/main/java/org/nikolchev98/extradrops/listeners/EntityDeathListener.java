@@ -35,29 +35,22 @@ public class EntityDeathListener implements Listener {
             return;
         }
 
-        ConfigurationSection dropsSection = config.getConfigurationSection(entityName + ".Added_Drops");
-
-        // Checks if "Added_Drops" for this mob exists in the yml
-        if (dropsSection == null) {
-            logger.warning(String.format(ADDED_DROPS_DO_NOT_EXIST, entityName));
-            return;
-        }
-
+        ConfigurationSection dropsSection = config.getConfigurationSection(entityName);
         Map<String, Map<String, Integer>> addedDrops = new HashMap<>();
 
         // Fills up addedDrops map with data from the config
         for (String itemName : dropsSection.getKeys(false)) {
-            ConfigurationSection itemConfig = dropsSection.getConfigurationSection(itemName);
+            ConfigurationSection configDropElement = dropsSection.getConfigurationSection(itemName);
 
-            if (itemConfig == null) {
+            if (configDropElement == null) {
                 logger.warning(String.format(SKIPPING_INVALID_ITEM_CONFIGURATION, itemName, entityName));
                 continue;
             }
 
             // Retrieves percentage, min_amount, and max_amount from config
-            int percentage = itemConfig.getInt("Chance", 0);
-            int minAmount = itemConfig.getInt("Min_Amount", 1);
-            int maxAmount = itemConfig.getInt("Max_Amount", 1);
+            int percentage = configDropElement.getInt("Chance", 0);
+            int minAmount = configDropElement.getInt("Min_Amount", 1);
+            int maxAmount = configDropElement.getInt("Max_Amount", 1);
 
             Map<String, Integer> itemData = new HashMap<>();
             itemData.put("Chance", percentage);
@@ -75,7 +68,7 @@ public class EntityDeathListener implements Listener {
             int minAmount = itemData.get("Min_Amount");
             int maxAmount = itemData.get("Max_Amount");
 
-            if (chance == 0 || chanceFails(chance)) {
+            if (chance <= 0 || chanceFails(chance)) {
                 continue;
             }
 
