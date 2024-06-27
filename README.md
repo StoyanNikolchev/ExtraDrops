@@ -11,8 +11,7 @@ ExtraDrops is a Minecraft (1.20) Spigot plugin that allows server administrators
 # Example Configuration for ExtraDrops
 ```yaml
 ENDER_DRAGON:
-  Added_Drops:
-    NETHER_STAR:
-      Chance: 100
-      Min_Amount: 1
-      Max_Amount: 300
+  NETHER_STAR:
+    Chance: 100
+    Min_Amount: 1
+    Max_Amount: 300
